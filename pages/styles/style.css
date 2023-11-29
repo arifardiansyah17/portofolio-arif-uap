@@ -1,0 +1,409 @@
+/* ======== FONTS ======== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* ======== VARIABLE CSS ======== */
+:root {
+  --primary-color: #fb6a27;
+  --dark-color: #402E32;
+  --gray-color: gray;
+  --dark-choco-color: #2e1c19;
+  --light-choco-color: #B78570;
+  --white-v1-color: #FFF6EE;
+  --white-v2-color: #fff0e7;
+  --white-color: white;
+
+
+  --h1-font-size: 40px;
+  --h2-font-size: 32px;
+  --small-font-size: 14px;
+}
+
+/* ======== RESET CSS ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ======== GLOBAL CSS ======== */
+
+body{
+  color: var(--dark-choco-color);
+  background-color: var(--white-v1-color);
+}
+
+
+section {
+  scroll-snap-align: start;
+  padding: 50px 0;
+  height: 100vh;
+}
+
+@media screen and (max-width: 1000px) {
+  .header-section{
+    height: 100vh;
+  }
+
+  .biodata-section{
+    height: 210vh;
+  }
+  .portfolio-section{
+    padding: 60px 0;
+    height: 100vh;
+  }
+
+  .skills-section{
+    height: 130vh;
+  }
+
+  .contact-section{
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-section{
+    height: 180vh;
+  }
+
+  .biodata-section{
+    height: 230vh;
+  }
+  .portfolio-section{
+    height: 140vh;
+  }
+
+  .skills-section{
+    height: 190vh;
+  }
+
+  .contact-section{
+    height: 160vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .header-section{
+    height: 180vh;
+  }
+
+  .biodata-section{
+    height: 230vh;
+  }
+  .portfolio-section{
+    height: 100vh;
+  }
+
+  .skills-section{
+    height: 200vh;
+  }
+
+  .contact-section{
+    padding: 70px 0;
+    height: 150vh;
+  }
+}
+
+section .section-title {
+  font-size: var(--h2-font-size);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn-orange {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn-pcc {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.text-orange {
+  color: var(--primary-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+.fs-7 {
+  font-size: var(--small-font-size);
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--primary-color);
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background: #d1e5ff52;
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+/* ======== CSS PER SECTION ======== */
+
+/*NAVBAR*/
+
+
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-color{
+  background-color: var(--white-v1-color);
+}
+.navbar .nav-item,
+.nav-link:hover,
+.navbar .nav-item,
+.nav-link.act {
+  color: var(--primary-color);
+}
+
+/* HEADER */
+.header-section .header-title {
+  font-size: var(--h1-font-size);
+}
+
+.header-section .header-skill {
+  color: var(--dark-choco-color);
+}
+
+.header-section .header-skill:hover {
+  color: var(--primary-color);
+}
+
+.header-section .header-skill i {
+  transition: 0.3s;
+}
+
+.header-section .header-skill:hover i {
+  transform: rotate(-45deg);
+}
+
+
+.header-section .header-img {
+  width: 90%;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .header-section .header-img {
+    width: 100%;
+    object-fit: cover;
+    margin-left: 50px;
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-section .header-img {
+    width: 70%;
+    object-fit: cover;
+    margin-left: 50px;
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header-section .header-img {
+    width: 70%;
+    object-fit: cover;
+    margin-left: 50px;
+    margin-top: 100px;
+  }
+}
+
+/* BIODATA */
+.biodata-section {
+  background-color: var(--white-v2-color);
+}
+.biodata-section .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--primary-color);
+}
+
+
+.biodata-section .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.biodata-section .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.biodata-section .content ul strong {
+  margin-right: 10px;
+}
+
+.biodata-section .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #149ddd;
+  line-height: 0;
+}
+
+.biodata-section .content p:last-child {
+  margin-bottom: 0;
+}
+
+.swiper {
+  height: 100%;
+}
+
+.swiper-slide {
+  z-index: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.biodata-section .img-bio {
+  width: 90%;
+  object-fit: cover;
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 992px) {
+  .biodata-section .img-bio {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 50%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .biodata-section .img-bio {
+    width: 60%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .biodata-section .img-bio {
+    object-fit: cover;
+  }
+}
+
+/* PORTFOLIO */
+.portfolio-section {
+  margin-bottom: 60px;
+  z-index: 0;
+}
+.portfolio-section .card .card-img-top {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.text:hover {
+  scale: 1.4px;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-section .card .card-img-top {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio-section .card {
+    height: 250px;
+    width: 200px;
+  }
+}
+/* SKILLS */
+.skills-section {
+  margin-top: 10px;
+  background-color: var(--dark-color);
+}
+
+.skills-section .progress-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: var(--gray-color);
+}
+
+.skills-section .progress-bar .progress {
+  background-color: var(--primary-color);
+}
+
+.skills-section .skills-img {
+  width: 40%;
+  margin-top: 80px;
+}
+
+@media screen and(max-width: 1000px){
+  .skills-section .skills-img{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills-section .skills-img {
+    width: 75%;
+    margin-top: 80px;
+    margin-left: 70px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills-section .skills-img {
+    width: 65%;
+    margin-top: 50px;
+    margin-left: 70px;
+  }
+}
+/* CONTACT */
+.contact-section {
+  margin-top: 70px;
+}
+.btn-orange:hover {
+  background-color: #fb6a27be;
+  color: white;
+}
+
+.contact-section .mb-0 {
+  margin-top: 6px;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--dark-choco-color);
+}
